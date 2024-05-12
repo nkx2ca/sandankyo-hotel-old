@@ -69,6 +69,8 @@ const modal = `
 </div>
 `;
 $(document).ready(function() {
+  sessionStorage.clear();
+
   if (!sessionStorage.getItem(sessionKey)) {
     $('body').append(modal);
     sessionStorage.setItem(sessionKey, sessionValue);
