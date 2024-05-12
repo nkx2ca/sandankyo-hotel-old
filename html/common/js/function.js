@@ -110,9 +110,11 @@ const modal = `
                               We will inform you again about the date of reopening.<br>
                               We apologize for any inconvenience this may cause you, and we appreciate your understanding.<br>
                               We look forward to your continued patronage even after the renovations.<br>
-                            </p>
-                            <p class="p2">
-                            Please contact us via the below e-mail if you have anything.
+                              <br>
+                              Please contact us via the below e-mail if you have anything.<br>
+                              <br>
+                              Sincerely,<br>
+                              General Manager 
                             </p>
                             <p class="contact-email">contact@sandankyo.co.jp</p>
                         </div>
