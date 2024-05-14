@@ -131,3 +131,145 @@
     background-color: #5ab4bd;
     color: #fff;
   }
+
+@media screen and (max-width: 767px){
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,50%);
+	padding: 0 0;
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active{
+	opacity: 1;
+	visibility: visible;
+}
+/*モーダル枠の指定*/
+.modal-body{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 90%;
+}
+/*モーダルを閉じるボタンの指定*/
+.modal-close{
+	position: absolute;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	top: -20px;
+	right: -20px;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+/*モーダル内のコンテンツの指定*/
+.modal-content{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	background: #fff;
+	text-align: left;
+	padding: 0;
+}
+
+.modal-content > h1 {
+    padding: 20px 0;
+}
+
+.p2{
+    padding: 20px 0;
+}
+
+.contact-email{
+    text-align: center;
+    background-color: rgba(245,245,245,80%);
+    font-size: 16px;
+    color: #406127;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto;
+}
+  
+  /*タブのスタイル*/
+  .tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  
+  /*ラジオボタンを全て消す*/
+  input[name="tab_item"] {
+    display: none;
+  }
+  
+  /*タブ切り替えの中身のスタイル*/
+  .tab_content {
+    display: none;
+    padding: 20px 20px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /*選択されているタブのコンテンツのみを表示*/
+  #all:checked ~ #all_content,
+  #english:checked ~ #english_content,
+  #design:checked ~ #design_content {
+    display: block;
+  }
+  
+  /*選択されているタブのスタイルを変える*/
+  .tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+  }
+.tab_content_description > div > p {
+    font-size: 12px;
+}
+.tab_content_description > h1 {
+    font-size: 16px;
+}
+}
