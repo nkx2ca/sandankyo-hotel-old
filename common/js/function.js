@@ -128,7 +128,6 @@ const modal = `
 
 $(document).ready(function() {
   sessionStorage.clear();
-  console.log(location.pathname);
 
   if (location.pathname === '/' && !sessionStorage.getItem(sessionKey)) {
     $('body').append(modal);
