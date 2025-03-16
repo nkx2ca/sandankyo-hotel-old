@@ -128,8 +128,9 @@ const modal = `
 
 $(document).ready(function() {
   sessionStorage.clear();
+  console.log(location.pathname);
 
-  if (!sessionStorage.getItem(sessionKey)) {
+  if (location.pathname === '/' && !sessionStorage.getItem(sessionKey)) {
     $('body').append(modal);
     sessionStorage.setItem(sessionKey, sessionValue);
     var close = $('.modal-close');
